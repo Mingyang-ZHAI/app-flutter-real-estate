@@ -1,5 +1,67 @@
 # Real Estate App - Flutter
+## Environment Setup (macOS / Apple Silicon)
 
+This project is built with Flutter 2.10.5 and targets Android API 30–33. Please follow the steps below to set up your environment correctly.
+
+1. Flutter SDK
+Install Flutter 2.10.5:
+`curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_2.10.5-stable.zip`
+`unzip flutter_macos_2.10.5-stable.zip`
+
+Add it to your PATH:
+`export PATH="$PATH:/Users/your_name/flutter/bin"`
+
+Confirm:
+`flutter --version`
+The output should be like: Flutter 2.10.5 • Dart 2.16.x
+
+2. Java Development Kit (JDK)
+- Required: Java 11 & Java 17
+- Set environment:
+
+Example:
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export PATH="$JAVA_HOME/bin:$PATH"
+
+Confirm:
+java -version
+You need to configure to ensure you can change between jdk 11 and jdk 17. 
+Some configuration in the following steps need jdk 17. 
+But the project needed jdk 11 to be run, because this project was built years ago and used Flutter 2.x. 
+Flutter 2.x + Gradle plugin 7.0.2 only support JDK 8 ~ 11.
+
+3. Android SDK (via Android Studio)
+Automated selected
+
+4. Gradle Configuration
+
+Open android/gradle/wrapper/gradle-wrapper.properties and ensure:
+
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-all.zip
+
+Open android/build.gradle and ensure:
+
+classpath 'com.android.tools.build:gradle:7.0.2'
+
+
+5. AndroidManifest Fix (for API 31+)
+
+In android/app/src/main/AndroidManifest.xml, make sure your <activity> includes:
+
+android:exported="true"
+
+
+6. Final Steps
+
+flutter clean
+flutter pub get
+flutter run
+
+
+This setup ensures compatibility with older Flutter versions and newer Android targets.
+For API integrations and feature development, continue working inside the lib/ and android/ folders.
+
+## Resources
 - Preview video: https://youtu.be/11u0KeymAAs
 - Support my work: https://www.patreon.com/sangvaleap
   
