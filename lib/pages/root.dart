@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:real_estate/pages/explore.dart';
 import 'package:real_estate/theme/color.dart';
 import 'package:real_estate/widgets/bottombar_item.dart';
+import 'package:real_estate/pages/chat_list.dart';
 
 import 'home.dart';
 
@@ -33,7 +34,7 @@ class _RootAppState extends State<RootApp> {
     {
       "icon": Icons.forum_outlined,
       "active_icon": Icons.forum_rounded,
-      "page": HomePage(),
+      "page": ChatListPage(),
     },
     {
       "icon": Icons.settings_outlined,
@@ -53,6 +54,8 @@ class _RootAppState extends State<RootApp> {
     );
   }
 
+  // Use IndexedStack to switch between pages based on the selected tab on the bottom bar.
+  // Commented by kzhu
   Widget _buildPage() {
     return IndexedStack(
       index: _activeTab,

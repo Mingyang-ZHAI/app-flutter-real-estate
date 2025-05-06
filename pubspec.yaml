@@ -16,6 +16,7 @@ dependencies:
   google_fonts: ^2.1.1
   font_awesome_flutter: ^9.2.0
   carousel_slider: ^4.0.0
+#  stream_chat_flutter: ^4.1.0 # Use this version to support Dart 2.16
 
 
 dev_dependencies:
