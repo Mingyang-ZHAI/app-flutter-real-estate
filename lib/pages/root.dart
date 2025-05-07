@@ -45,6 +45,7 @@ class _RootAppState extends State<RootApp> {
 
   @override
   Widget build(BuildContext context) {
+    print("Building RootApp...");  // added by kzhu
     return Scaffold(
       backgroundColor: AppColor.appBgColor,
       body: _buildPage(),

@@ -20,6 +20,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    print("Building HomePage...");  // Added by kzhu
     return CustomScrollView(
       slivers: <Widget>[
         SliverAppBar(

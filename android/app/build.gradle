@@ -27,7 +27,8 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
 //    compileSdkVersion 30
-    compileSdkVersion 33 // revised by kzhu
+//    compileSdkVersion 33 // revised by kzhu
+    compileSdkVersion 34
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -37,7 +38,8 @@ android {
         applicationId "com.example.real_estate"
         minSdkVersion 16
 //        targetSdkVersion 30
-        targetSdkVersion 33
+//        targetSdkVersion 33 // revised by kzhu
+        targetSdkVersion 34
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }

@@ -16,8 +16,10 @@ dependencies:
   google_fonts: ^2.1.1
   font_awesome_flutter: ^9.2.0
   carousel_slider: ^4.0.0
-#  stream_chat_flutter: ^4.1.0 # Use this version to support Dart 2.16
-
+#  stream_chat_flutter: ^3.6.0 # Use this version to support Dart 2.16 & image_picker_android plugin
+  stream_chat: ^3.6.0 # stream_chat_flutter depends on video_compress which will cause error for current version
+  image_picker: 0.8.4+3 # Solve image_picker_android incompatibility issue with Dart 2.16
+  intl: 0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -25,3 +27,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+# Solve video_compress incompatibility issue with Dart 2.16
+#dependency_overrides:
+#  video_compress: 3.0.0
