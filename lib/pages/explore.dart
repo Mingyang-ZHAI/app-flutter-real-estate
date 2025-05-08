@@ -6,6 +6,7 @@ import 'package:real_estate/widgets/company_item.dart';
 import 'package:real_estate/widgets/custom_textbox.dart';
 import 'package:real_estate/widgets/icon_box.dart';
 import 'package:real_estate/widgets/recommend_item.dart';
+import 'package:real_estate/pages/stripe_test_page.dart';
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({Key? key}) : super(key: key);
@@ -91,10 +92,29 @@ class _ExplorePageState extends State<ExplorePage> {
           const SizedBox(
             height: 20,
           ),
+          // _buildBrokers(),
+          // const SizedBox(
+          //   height: 100,
+          // ),
           _buildBrokers(),
-          const SizedBox(
-            height: 100,
+          const SizedBox(height: 30),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StripeTestPage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                primary: AppColor.primary,
+              ),
+              child: Text('Stripe Payment'),
+            ),
           ),
+          const SizedBox(height: 100),
+
         ],
       ),
     );

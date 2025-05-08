@@ -61,6 +61,12 @@ flutter run
 This setup ensures compatibility with older Flutter versions and newer Android targets.
 For API integrations and feature development, continue working inside the lib/ and android/ folders.
 
+
+## Env for APIs
+Flutter:
+Flutter 2.10 + flutter_stripe: 2.2.0 + Java 11
+
+
 ## Resources
 - Preview video: https://youtu.be/11u0KeymAAs
 - Support my work: https://www.patreon.com/sangvaleap
