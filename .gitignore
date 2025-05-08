@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+.env
+
+.history/
+.vscode/
+
+
+.DS_Store
+
+
+venv/
+:wq
+
